@@ -1,0 +1,105 @@
+img {
+   
+    height: 30%;
+    width: 30%;
+    object-fit: contain
+}
+
+.ex1{
+    position:fixed;
+	left:100px;
+	top:60px;
+    height: 100%;
+    width: 100%;
+}
+.ex2{
+    position:fixed;
+	left:250px;
+	top:60px;
+    height: 100%;
+    width: 100%;
+}
+.ex3{
+    position:fixed;
+	left:400px;
+	top:60px;
+    height: 100%;
+    width: 100%;
+}
+.ex4{
+    position:fixed;
+	left:550px;
+	top:60px;
+    height: 100%;
+    width: 100%;
+}
+.ex5{
+    position:fixed;
+	left:700px;
+	top:60px;
+    height: 100%;
+    width: 100%;
+}
+.ex6{
+    position:fixed;
+	left:100px;
+	top:180px;
+    height: 100%;
+    width: 100%;
+}
+.ex7{
+    position:fixed;
+	left:250px;
+	top:180px;
+    height: 100%;
+    width: 100%;
+}
+.ex8{
+    position:fixed;
+	left:400px;
+	top:180px;
+    height: 100%;
+    width: 100%;
+}
+.ex9{
+    position:fixed;
+	left:550px;
+	top:180px;
+    height: 100%;
+    width: 100%;
+}
+.ex10{
+    position:fixed;
+	left:700px;
+	top:180px;
+    height: 100%;
+    width: 100%;
+}
+.ex11{
+    position:fixed;
+	left:100px;
+	top:300px;
+    height: 100%;
+    width: 100%;
+}
+.ex12{
+    position:fixed;
+	left:250px;
+	top:300px;
+    height: 100%;
+    width: 100%;
+}
+.ex13{
+    position:fixed;
+	left:550px;
+	top:300px;
+    height: 100%;
+    width: 100%;
+}
+.ex14{
+    position:fixed;
+	left:700px;
+	top:300px;
+    height: 100%;
+    width: 100%;
+}
