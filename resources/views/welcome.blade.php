@@ -37,7 +37,13 @@
             overflow: hidden;        
         }
     </style>
-    <?php
+</head>
+
+
+<body style="background-color: white;">
+   
+
+<?php
         if (isset($_GET["categoria"])){
             $categoria     = $_GET["categoria"];
             $descCategoria ="";
@@ -72,15 +78,20 @@
                     $descCategoria = "Saúde";
                     break;
             }
-            echo '
-            <form action="salvarRequisicao.blade.php" method="post">
-                <label for="">Unidade: <b>'.$unidade.'</b></label>
-                <label for="categoria">Categoria:</label>
+?>
+            <form action="{{ route('posts.store') }}" method="post">
+                @csrf
+                <input type="text" name="unidade" value="<?php echo $unidade ?>">
+                <input type="text" name="categoria" value="<?php echo $categoria ?>">
+                <input type="text" name="desc_categoria" value="<?php echo $descCategoria ?>">
+
+                <label for="">Unidade: <b><?php echo $unidade ?></b></label>             
+                <label for="categoria">Categoria:</label>                
                 <select name="categoria" disabled>
-                    <option value="'.$categoria.'">'.$descCategoria.'</option>    
+                    <option value="<?php echo $categoria ?>"><?php echo $descCategoria ?></option>    
                 </select>
-                <label for="decricao">Descrição</label>
-                <input name="decricao" type="textarea" colspan="5" rows="3">
+                <label for="descricao">Descrição</label>
+                <textarea name="descricao" cols="30" rows="4"></textarea>
                 <label for="servidor">É relacionado a algum servidor? qual?</label>
                 <input name="servidor" type="text">
                 <label>Informe a localização do problema:</label>
@@ -98,12 +109,10 @@
                 <input type="text" name="estado">
                 <button type="submit">Enviar</button>
             </form>
-            ';  
+<?php            
         }
-    ?>
-</head>
-<body style="background-color: white;">
-   
+?>
+
    <div class="p-3 mb-2 bg-dark bg-gradient">
 
     <div class="container">
