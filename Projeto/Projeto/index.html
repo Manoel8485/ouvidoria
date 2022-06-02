@@ -12,7 +12,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <h5> <img src="png/logo.jpg"  alt="Imagem de Exemplo" height="36"> Ouvidoria Municipal</h5> 
+          <h5> <img src="png/logo.jpg"  alt="Imagem de Exemplo" height="36">Ouvidoria Municipal</h5> 
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -20,10 +20,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Página Inicial</a>
+              <div class="container text-center">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#LoginModal">
+                    Login
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Relatorios</a>
+              <a type="button" class="btn btn-primary " nav-link href="relatorio.html">Relatorios</a>
             </li>
         </div>
       </div>
@@ -100,5 +102,42 @@
      </div>
     </div>
    </div>
+
+
+   <!--Botão para chamar Modal
+   <div class="container text-center">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#LoginModal">
+        Login
+    Fim do Botão-->   
+</div>
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="LoginModal">Área Restrita Audire</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="Login" class="col-form-label">Login:</label>
+                  <input type="text" nome = Login class="form-control" id="Login" placeholder="Digite o Login">
+                </div>
+                <div class="mb-3">
+                  <label for="Senha" class="col-form-label">Senha:</label>
+                  <input type="password" Senha="password" class="form-control" id="Senha" placeholder="Digite a senha">
+                </div>
+              </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Acessar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
 </body>
 </html>
