@@ -2,6 +2,7 @@ drop database if exists ouvidoria;
 create database ouvidoria;
 use ouvidoria;
 
+
 /*
 create table login (
 id int primary key auto_increment,

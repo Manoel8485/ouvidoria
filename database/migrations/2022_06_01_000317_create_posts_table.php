@@ -19,7 +19,7 @@ return new class extends Migration
              $table->integer('categoria');
              $table->string('desc_categoria',250);
              $table->text('descricao');
-             $table->string('servidor',250);
+             $table->string('servidor',250)->nullable();
              $table->string('rua',250);
              $table->string('numero',10);
              $table->string('bairro',250);
