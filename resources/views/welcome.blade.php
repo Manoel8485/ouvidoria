@@ -29,9 +29,9 @@
                 </button> 
               </div>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a type="button" class="btn btn-primary " nav-link href="relatorio/relatorio.html">Relatorios</a>
-            </li>
+            </li> -->
         </div>
       </div>
     </nav>
