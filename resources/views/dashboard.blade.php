@@ -43,7 +43,11 @@
                     <td><h5>Cultura</h5></td>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td>
+                        @foreach($requisicao as $requisicoes)
+                            <p>{{$requisicoes->$categoria}}</p>
+                        @endfoeach
+                    </td>
                 </tr>
     
                 <tr>
@@ -51,56 +55,88 @@
                     <td><h5>Turismo</h5></td>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td>
+                        @foreach($requisicao as $requisicoes)
+                            <p>{{$requisicoes->$categoria}}</p>
+                        @endfoeach
+                    </td>
                 </tr>
                 <tr>
                     <td>3</td>
                     <td><h5>Educação</h5></td>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td>
+                        @foreach($requisicao as $requisicoes)
+                            <p>{{$requisicoes->$categoria}}</p>
+                        @endfoeach
+                    </td>
                 </tr>
                 <tr>
                     <td>4</td>
                     <td><h5>Esporte</h5></td>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td>
+                        @foreach($requisicao as $requisicoes)
+                            <p>{{$requisicoes->$categoria}}</p>
+                        @endfoeach
+                    </td>
                 </tr>
                 <tr>
                     <td>5</td>
                     <td><h5>Gabinete</h5></td>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td>
+                        @foreach($requisicao as $requisicoes)
+                            <p>{{$requisicoes->$categoria}}</p>
+                        @endfoeach
+                    </td>
                 </tr>
                 <tr>
                     <td>6</td>
                     <td><h5>Meio Ambiente</h5></td>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td>
+                        @foreach($requisicao as $requisicoes)
+                            <p>{{$requisicoes->$categoria}}</p>
+                        @endfoeach
+                    </td>
                 </tr>
                 <tr>
                     <td>8</td>
                     <td><h5>Obras</h5></td>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td>
+                        @foreach($requisicao as $requisicoes)
+                            <p>{{$requisicoes->$categoria}}</p>
+                        @endfoeach
+                    </td>
                 </tr>
                 <tr>
                     <td>9</td>
                     <td><h5>Promoção Social</h5></td>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td>
+                        @foreach($requisicao as $requisicoes)
+                            <p>{{$requisicoes->$categoria}}</p>
+                        @endfoeach
+                    </td>
                 </tr>
                 <tr>
                     <td>10</td>
                     <td><h5>Saúde</h5></td>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td>
+                        @foreach($requisicao as $requisicoes)
+                            <p>{{$requisicoes->$categoria}}</p>
+                        @endfoeach
+                    </td>
                 </tr>
             </tbody>
         </table>
