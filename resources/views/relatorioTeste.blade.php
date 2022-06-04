@@ -39,7 +39,7 @@
     
             <tbody>
                 <tr>
-                    <td>1</td>
+                    <td></td>
                     <td><h5>Cultura</h5></td>
                     <td></td>
                     <td></td>
@@ -50,13 +50,18 @@
                     </td>
                 </tr>
     
-                <tr>
-                    <td>2</td>
-                    <td><h5>Turismo</h5></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                <?php
+                    while($user_data = mysqli_fetch_assoc($result))
+                    {
+                        echo "<tr>";
+                        echo "<tr>".$user_data['codigo']."<tr>";
+                        echo "<tr>".$user_data['secretaria']."<tr>";
+                        echo "<tr>".$user_data['pendentes']."<tr>";
+                        echo "<tr>".$user_data['realizado']."<tr>";
+                        echo "<tr>".$user_data['total']."<tr>";
+                        echo "</tr>";
+                    }   
+                 ?>
                 <tr>
                     <td>3</td>
                     <td><h5>Educação</h5></td>
@@ -101,34 +106,6 @@
                 </tr>
                 <tr>
                     <td>10</td>
-                    <td><h5>Saúde</h5></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td><h5>Saúde</h5></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td><h5>Saúde</h5></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td><h5>Saúde</h5></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>14</td>
                     <td><h5>Saúde</h5></td>
                     <td></td>
                     <td></td>
