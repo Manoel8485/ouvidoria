@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   
     <title>Ouvidoria</title>
 
@@ -12,7 +13,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
       <div class="container">
         <a class="navbar-brand" href="#">
@@ -107,7 +107,20 @@
                     break;
             }
 ?>
-            <form action="{{ route('posts.store') }}" method="post">
+
+
+
+<div class="modal fade" id="modalreq" tabindex="-1" role="dialog" aria-labelledby="modallabreq" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modallabreq">Formulario de Requisiçao</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form action="{{ route('posts.store') }}" method="post">
                 @csrf
                 <input type="text" class="hidden" name="unidade" value="<?php echo $unidade ?>">
                 <input type="text" class="hidden" name="categoria" value="<?php echo $categoria ?>">
@@ -117,26 +130,47 @@
                 <label for="categoria">Categoria:</label>                
                 <select name="categoria" disabled>
                     <option value="<?php echo $categoria ?>"><?php echo $descCategoria ?></option>    
-                </select>
+                </select><br>
                 <label for="descricao">Descrição</label>
-                <textarea name="descricao" cols="30" rows="4"></textarea>
+                <textarea name="descricao" cols="60" rows="4"></textarea>
                 <label for="servidor">É relacionado a algum servidor? qual?</label>
-                <input name="servidor" type="text">
-                <label>Informe a localização do problema:</label>
+                <input class="form-control" id="servidor" name="servidor" type="text"><br>
+                <label>Informe a localização do problema:</label><br>
                 <label for="rua">Rua</label>
-                <input type="text" name="rua" id="">
+                <input class="form-control" id="rua" type="text" name="rua" id="">
                 <label for="numero">Número do estabelecimento</label>    
-                <input type="text" name="numero" id="">
+                <input class="form-control" id="numero" type="text" name="numero" id="">
                 <label for="bairro">Bairro</label>
-                <input type="text" name="bairro" id="">
+                <input class="form-control" id="bairro" type="text" name="bairro" id="">
                 <label for="referencia">Referência</label>
-                <input type="text" name="referencia">
+                <input class="form-control" id="referencia" type="text" name="referencia">
                 <label for="cidade">Cidade</label>
-                <input type="text" name="cidade">
+                <input class="form-control" id="cidade" type="text" name="cidade">
                 <label for="estado">Estado</label>
-                <input type="text" name="estado">
-                <button type="submit">Enviar</button>
-            </form>
+                <select id="inputEstado"  name="estado" class="form-control">
+                    <option selected>Escolher...</option>
+                    <option>Amazonas</option>
+                    <option>Bahia</option>
+                    <option>Ceára</option>
+                    <option>Distrito Federal</option>
+                    <option>Espirito Santo</option>
+                    <option>Goiás</option>
+                    <option>Mato Grosso</option>
+                    <option>Pará</option>
+                    <option>Rondonia</option>
+                 </select>
+      </div>
+     
+      <div class="modal-footer">
+        <!-- <button type="button"  data-dismiss="modal"  class="btn btn-secondary" >Fechar</button> -->
+        <button type="button"  onclick="fechar()"  class="btn btn-secondary" >Fechar</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+            
 <?php            
         }
 ?>
@@ -151,7 +185,7 @@
 
             <div class="btn-group" role="group" aria-label="Grupo 1">
 
-            <button type="submit" class="button" name="categoria" value="9"  class="btn btn-Primary">
+            <button type="submit" class="button" name="categoria" value="9"  class="btn btn-Primary" >
                 <div class="card border-dark mb-3" class="h-100 d-inline-block" style="width: 220px; background-color: rgb(255, 0, 0);" class="col-lg-3" style="padding: 5px" class="card-deck">
                     <img class="card-img-top" src="https://marianazorron.com.br/site/wp-content/uploads/2020/04/corona-4931132_1280.png" alt="Covid 19" class="img-rounnded" height="200p" width="200p">
                     <div class="card-body">
@@ -270,8 +304,26 @@
       </div>
     </div>
 
-
-
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+       $.fn.extend({
+        fechar: function () {
+            return this.each(function () {
+                $('#modalreq').modal('hide');    
+            });
+        }
+        });
+        function fechar(){
+            $('#modalreq').fechar();
+        }
+               
+        $(window).load(function() {
+            $('#modalreq').modal('show');            
+            if (fc = true){
+                $('#modalreq').modal('hide');   
+            }
+        });
+    </script>
     
     </body>
 </html>
