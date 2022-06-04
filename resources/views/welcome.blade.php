@@ -25,9 +25,12 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <div class="container text-center">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#LoginModal">
+                <a href="{{ route('login') }}" type="button" class="btn btn-primary">
                     Login
-                </button> 
+</a> 
+                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#LoginModal">
+                    Login
+                </button>  -->
               </div>
             </li>
             <!-- <li class="nav-item">
